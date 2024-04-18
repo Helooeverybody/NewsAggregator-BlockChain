@@ -46,7 +46,7 @@ public class ChangeJson {
         // Put back into name field
         user.put("tags", name);
     }
-    public void removeDuplicate(String jsonFile, String outputFile){
+    public void removeDuplicate(String jsonFile, String outputFile, String primaryKey){
         try{
             JSONParser parser = new JSONParser();
             JSONArray jsonArray = (JSONArray) parser.parse(new FileReader(jsonFile));
@@ -55,7 +55,7 @@ public class ChangeJson {
             Set<String> linkSet = new LinkedHashSet<>();
             for (Object obj: jsonArray){
                 JSONObject temp = (JSONObject)obj;
-                String link = (String)temp.get("link");
+                String link = (String)temp.get(primaryKey);
                 if (!linkSet.contains(link)){
                     linkSet.add(link);
                     jsonObjectSet.add((JSONObject) obj);
