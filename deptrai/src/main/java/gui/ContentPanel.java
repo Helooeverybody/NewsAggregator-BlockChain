@@ -85,7 +85,6 @@ public class ContentPanel extends JPanel implements LoadingAnimationHandler {
 
     @Override
     public void showLoadingAnimation() {
-        System.out.println("The content panel show loading is called");
         removeAll();
         add(new JLabel("Loading..."), BorderLayout.CENTER);
         revalidate();

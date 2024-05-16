@@ -12,7 +12,6 @@ import my_enum.sort_filter.SortFilterOptions.Sort;
 import my_enum.sort_filter.SortFilterOptions.Filter.*;
 public class utilityFunction {
     public List<SearchResult> sortByDateAsc(List<SearchResult> searchResults) {
-        System.out.println("The function sort by oldest has been called"); // fixme
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM dd, yyyy", Locale.ENGLISH);
         return searchResults.stream()
                 .sorted(Comparator.comparing((SearchResult result) -> LocalDate.parse(result.getDate(), formatter)))
@@ -20,7 +19,6 @@ public class utilityFunction {
     }
 
     public List<SearchResult> sortByDateDesc(List<SearchResult> searchResults) {
-        System.out.println("The function sort by newest has been called"); // fixme
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM dd, yyyy", Locale.ENGLISH);
         return searchResults.stream()
                 .sorted(Comparator.comparing((SearchResult result) -> LocalDate.parse(result.getDate(), formatter)).reversed())
@@ -38,15 +36,8 @@ public class utilityFunction {
                 .collect(Collectors.toList());
     }
     //TODO
-    public List<SearchResult> filterBySource(List<SearchResult> searchResults, String source) {
-        return searchResults.stream()
-                .filter(result -> result.getSource().equalsIgnoreCase(source))
-                .collect(Collectors.toList());
-    }
-    //TODO
 
     public List<SearchResult> filterByType(List<SearchResult> searchResults, String type) {
-        System.out.println("The filter by type has been called");
         return searchResults.stream()
                 .filter(result -> result.getType().equalsIgnoreCase(type))
                 .collect(Collectors.toList());

@@ -222,7 +222,6 @@ public class HeaderPanel extends JPanel {
     }
 
     public String getSearchKeyword() {
-        System.out.println("The search keyword is called from other class: " + searchField.getText()); // fixme
         return searchField.getText();
     }
 
@@ -299,7 +298,6 @@ public class HeaderPanel extends JPanel {
             parent.selectedFilterYear = null;
             parent.selectedFilterType = selectedFilterType;
             parent.selectedSort = null; // Reset sort
-            System.out.println("Selected Sort: " + null);
         }
 
     }
@@ -314,10 +312,10 @@ public class HeaderPanel extends JPanel {
 
         @Override
         public void actionPerformed(ActionEvent e) {
+            System.out.println("The selected year from header panel is: " + selectedFilterYear);
             parent.selectedFilterYear = selectedFilterYear;
             parent.selectedFilterType = null;
             parent.selectedSort = null; // Reset sort
-
         }
 
     }
