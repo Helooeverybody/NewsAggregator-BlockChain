@@ -2,8 +2,8 @@ package dto;
 
 import java.io.IOException;
 import java.util.List;
-import my_enum.sort_filter.SortFilterOptions.Sort;
-import my_enum.sort_filter.SortFilterOptions.Filter.*;
+import constant.option.SortFilterOptions.Sort;
+import constant.option.SortFilterOptions.Filter.*;
 
 public interface ApiService {
     List<SearchResult> search(String keyword) throws IOException, InterruptedException;

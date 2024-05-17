@@ -111,13 +111,13 @@ public class SearchResult {
         this.type = type;
     }
 
-//    public JSONArray getJsonArray() {
-//        return jsonArray;
-//    }
-//
-//    public void setJsonArray(JSONArray jsonArray) {
-//        this.jsonArray = jsonArray;
-//    }
+    public JSONArray getJsonArray() {
+        return jsonArray;
+    }
+
+    public void setJsonArray(JSONArray jsonArray) {
+        this.jsonArray = jsonArray;
+    }
     public void setDataByIndex(JSONArray jsonArray1, int index){
         Object obj = jsonArray1.get(index);
         JSONObject jsonObject = (JSONObject) obj;
