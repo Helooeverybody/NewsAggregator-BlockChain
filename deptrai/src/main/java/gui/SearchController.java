@@ -15,15 +15,11 @@ public class SearchController {
 //    private  SearchFunctionality searchFunctionality;
 //    private  ContentPanel contentPanel;
     private SearchFrame searchFrame;
-    private ContentTrend contentTrend;
-    private TrendFrame trendFrame;
     private SearchAPIService searchService;
 
     //    public SearchController(SearchFrame searchFrame, SearchFunctionality searchFunctionality, TrendFrame trendFrame){
-    public SearchController(SearchFrame searchFrameSearch, SearchAPIService searchService, TrendFrame trendFrame) {
+    public SearchController(SearchFrame searchFrameSearch, SearchAPIService searchService) {
         this.searchFrame = searchFrameSearch;
-//        this.searchFunctionality = searchFunctionality;
-        this.trendFrame = trendFrame;
         this.searchService = searchService;
 
         searchFrame.getHeaderPanel().setSearchListener(e -> {
