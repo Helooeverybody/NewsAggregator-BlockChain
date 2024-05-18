@@ -56,8 +56,8 @@ public class HeaderSearchPanel extends JPanel {
         searchField.setFont(new Font("Arial", Font.PLAIN, 18));
         searchField.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, Color.WHITE));
         searchField.setOpaque(false);
-        searchField.setForeground(Color.GREEN);
-        searchField.setCaretColor(Color.WHITE);
+        searchField.setForeground(Color.BLACK);
+        searchField.setCaretColor(Color.BLACK);
         searchField.setBorder(BorderFactory.createCompoundBorder(
                 searchField.getBorder(),
                 BorderFactory.createEmptyBorder(5, 5, 5, 5)));

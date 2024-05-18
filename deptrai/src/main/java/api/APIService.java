@@ -1,6 +1,5 @@
-package searchengine;
+package api;
 
-import dto.ApiService;
 import dto.SearchResult;
 import constant.function.InitializeJson;
 import org.json.simple.JSONArray;
@@ -12,7 +11,7 @@ import constant.function.SortFilterFunctions;
 import constant.option.SortFilterOptions.Sort;
 import constant.option.SortFilterOptions.Filter.*;
 
-public class APIService implements ApiService {
+public class APIService implements ApiServiceInterface {
     private JSONArray jsonArray;
     private Client client;
     private List<SearchResult> searchResults;

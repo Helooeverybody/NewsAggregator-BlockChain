@@ -3,13 +3,13 @@ package controller;
 import dto.TrendButtonListener;
 import gui.trend.panel.ContentTrendPanel;
 import gui.trend.TrendFrame;
-import searchengine.APIService;
+import api.APIService;
 
 import javax.swing.*;
 import java.io.IOException;
 import java.util.List;
 
-public class TrendController extends BaseController implements TrendButtonListener {
+public class TrendController implements TrendButtonListener {
     private final TrendFrame trendFrame;
     private final APIService apiService;
     public TrendController(TrendFrame trendFrame, APIService apiService) {
@@ -43,4 +43,6 @@ public class TrendController extends BaseController implements TrendButtonListen
     public void onTrendButtonClick() {
         trendFrame.setVisible(true);
     }
+
+
 }

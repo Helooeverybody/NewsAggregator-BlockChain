@@ -1,4 +1,4 @@
-package searchengine;
+package api;
 
 import java.lang.reflect.Type;
 import java.net.URLEncoder;
